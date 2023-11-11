@@ -1,38 +1,36 @@
-# Age Calculator App
+# 🔞 Age Calculator App
 
-![Age Calculator App](./screenshot.png)
-
-A simple Age Calculator web application that allows users to calculate their age based on the provided birthdate.
+The Age Calculator App is a web-based tool that calculates a person's age based on the entered birthdate.
 
 ## Table of Contents
+- [🔞 Age Calculator App](#-age-calculator-app)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [How to Use](#how-to-use)
+  - [Features](#features)
+  - [Challenges and Learning](#challenges-and-learning)
+  - [File Structure](#file-structure)
+  - [Live Demo](#live-demo)
+  - [Attribution](#attribution)
+  - [Contributing](#contributing)
+  - [Contact Information](#contact-information)
 
-- [Overview](#overview)
-- [Features](#features)
-- [Demo](#demo)
-- [Technologies Used](#technologies-used)
-- [Challenges and Learning](#challenges-and-learning)
-- [Contributions](#contributions)
-- [Contact](#contact)
+## Introduction
 
-## Overview
+The Age Calculator App provides users with an interface to input their birthdate. It then calculates and displays their age in years, months, and days.
 
-The Age Calculator App is a web-based tool that takes a user's birthdate input and calculates their age in years, months, and days. The app provides a user-friendly interface where users can input their birthdate and receive an immediate calculation of their age. This project was completed as part of the Frontend Mentor challenge, which aims to enhance frontend development skills by providing real-world design and coding projects.
+## How to Use
+
+1. Open the [Live Demo](#live-demo) file in a web browser.
+2. Enter the day, month, and year of your birthdate in the respective input fields.
+3. Click the button (arrow icon) to calculate your age.
+4. The app will display your age in years, months, and days.
 
 ## Features
 
 - Calculate age based on birthdate input.
 - Display the calculated age in years, months, and days.
 - Responsive design for various screen sizes.
-
-## Demo
-
-You can see the live demo of the Age Calculator App [here](https://age-calculator-seven-xi.vercel.app/).
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
 
 ## Challenges and Learning
 
@@ -42,12 +40,28 @@ This project was completed as part of the Frontend Mentor challenge. During the 
 - How to calculate age based on birthdate using JavaScript's Date object.
 - How to utilize Font Awesome icons to enhance the user interface.
 
-## Contributions
+## File Structure
 
-Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to create an issue or a pull request.
+- `index.html`: HTML file containing the age calculation interface.
+- `style.css`: CSS file for styling the app's layout.
+- `script.js`: JavaScript file with the age calculation logic.
 
+## Live Demo
 
-## Contact
+Explore the live demo of the Age Calculator App [here](#).
 
-- GitHub: [Adham Nasser](https://github.com/Adham-XIII)
-- Email: [adhamxiii10@gmail.com](mailto:adhmxiii10@gmail.com)
+## Attribution
+
+Challenge provided by [Frontend Mentor](https://www.frontendmentor.io?ref=challenge). Coded by [Adham Nasser](https://github.com/Adhamxiii).
+
+## Contributing
+
+If you'd like to contribute to this project, feel free to submit a pull request or open an issue.
+
+## Contact Information
+
+If you have any questions or need assistance, you can reach out to the project author:
+
+- Email: [Adham Nasser](mailto:adhamxiii22@gmail.com)
+- LinkedIn: [Adham Nasser](https://www.linkedin.com/in/adhamxiii/)
+- GitHub: [Adham Nasser](https://github.com/Adhamxiii)

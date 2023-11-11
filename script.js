@@ -15,7 +15,7 @@ btn.addEventListener("click", () => {
   const year = parseInt(yearIn.value);
   const inputDate = new Date(year, month, day);
 
-  if (isNaN(day) || day < 1 || day > 31) {
+  if (isNaN(day) || day <= 1 || day >= 31) {
     const errorDay = document.querySelector(".error-day");
     errorDay.textContent = "Must be a valid day.";
     errorDay.classList.add("error");
@@ -23,7 +23,7 @@ btn.addEventListener("click", () => {
     return;
   }
 
-  if (isNaN(month) || month < 1 || month > 12) {
+  if (isNaN(month) || month <= 1 || month >= 12) {
     const errorMonth = document.querySelector(".error-month");
     errorMonth.textContent = "Must be a valid month.";
     errorMonth.classList.add("error");
@@ -31,7 +31,7 @@ btn.addEventListener("click", () => {
     return;
   }
 
-  if (isNaN(year) || year < 1900 || year > 2023) {
+  if (isNaN(year) || year < 1900 || year >= new Date().getFullYear()) {
     const errorYear = document.querySelector(".error-year");
     errorYear.textContent = "Must be a valid year.";
     errorYear.classList.add("error");
