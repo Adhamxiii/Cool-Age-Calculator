@@ -15,23 +15,23 @@ btn.addEventListener("click", () => {
   const year = parseInt(yearIn.value);
   const inputDate = new Date(year, month, day);
 
-  if (isNaN(day) || day <= 1 || day >= 31) {
+  if (isNaN(day) || day < 1 || day > 31) {
     const errorDay = document.querySelector(".error-day");
-    errorDay.textContent = "Must be a valid day.";
+    errorDay.textContent = "Must be a valid day (1-31).";
     errorDay.classList.add("error");
     input[0].classList.add("error-input");
     return;
   }
 
-  if (isNaN(month) || month <= 1 || month >= 12) {
+  if (isNaN(month) || month < 0 || month > 11) {
     const errorMonth = document.querySelector(".error-month");
-    errorMonth.textContent = "Must be a valid month.";
+    errorMonth.textContent = "Must be a valid month (1-12).";
     errorMonth.classList.add("error");
     input[1].classList.add("error-input");
     return;
   }
 
-  if (isNaN(year) || year < 1900 || year >= new Date().getFullYear()) {
+  if (isNaN(year) || year < 1900 || year > new Date().getFullYear()) {
     const errorYear = document.querySelector(".error-year");
     errorYear.textContent = "Must be a valid year.";
     errorYear.classList.add("error");
@@ -42,13 +42,21 @@ btn.addEventListener("click", () => {
   const currentDate = new Date();
   const ageInMillis = currentDate - inputDate;
 
-  const yearsDiff = Math.floor(ageInMillis / (365.25 * 24 * 60 * 60 * 1000));
-  const monthsDiff = Math.floor(
-    (ageInMillis % (365.25 * 24 * 60 * 60 * 1000)) /
-      (30.44 * 24 * 60 * 60 * 1000)
-  );
+  const yearsDiff = currentDate.getFullYear() - inputDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+  const birthMonth = inputDate.getMonth();
+
+  let monthsDiff = currentMonth - birthMonth;
+  if (
+    monthsDiff < 0 ||
+    (monthsDiff === 0 && currentDate.getDate() < inputDate.getDate())
+  ) {
+    yearsDiff--;
+    monthsDiff += 12;
+  }
+
   const daysDiff = Math.floor(
-    (ageInMillis % (30.44 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000)
+    (currentDate - inputDate) / (1000 * 60 * 60 * 24)
   );
 
   yearRe.textContent = yearsDiff;
