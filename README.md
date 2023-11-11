@@ -48,7 +48,7 @@ This project was completed as part of the Frontend Mentor challenge. During the 
 
 ## Live Demo
 
-Explore the live demo of the Age Calculator App [here](#).
+Explore the live demo of the Age Calculator App [here](https://cool-age-calculator.vercel.app/).
 
 ## Attribution
 
